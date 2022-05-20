@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #090e20;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App{
+  margin: 100px;
+}
+
+.active_page{
+  background-color: #74e3ba;
+  border: 1px solid #74e3ba;
+  color: #0d1527;
+}
+
+.w-100 {
+  width: 30em;
+  text-align: center;
+  font-size: 1.3rem !important;
+  line-height: 1.25rem;
+  font-weight: 800;
+}
+
+
+#toast-container-main {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 9999999;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+#toast-container-main > div {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: white;
+  width: 100%;
+  margin-bottom: 10px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px;
+  animation: slide-in 0.2s;
+  transition: all 0.3s ease;
+}
+
+.toast-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: 900;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+button:hover {
+  background-color: rgba(8, 7, 7, 0.1);
+}
+
+.text-table-body {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.text-table-head {
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.view_trx {
+  cursor: pointer;
+
+}
+
+@media (max-width : 600px) {
+  .App{
+    margin: 50px;
+  }
+
+  .w-100 {
+    width: 20em;
+    text-align: center;
+    font-size: 1rem !important;
+    line-height: 1.25rem;
+    font-weight: 600;
+  }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #090e20; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(25, 156, 139); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(22, 56, 119); 
+}
